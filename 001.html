@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tave 1주차</title>
+</head>
+<body>
+
+    <script>
+        
+        // 호이스팅 
+        console.log(one);   // undifined
+        var one ="hoisting";
+        
+        two = 10;
+        console.log(two);   // 10
+        var two =15;
+
+        //변수 선언
+        var three=10;
+        var four = "10";
+        
+        //typeof
+        console.log(three); //10
+        console.log(typeof(three)); //number
+        console.log(four); //10
+        console.log(typeof(four)); //string
+
+        //형태에 따른 덧셈 차이
+        console.log(three+three); //20
+        console.log(three+four); //1010
+        console.log(typeof(three+four)); //string
+        console.log(four+four); //1010
+        
+        //형변환 숫자 -> 문자
+        console.log(three.toString()); //숫자 -> 문자 
+        console.log(typeof(three)); //number
+        console.log(typeof(three.toString())); //string       
+        console.log(typeof(four)); //string
+        
+        //형변환 문자 -> 숫자
+        console.log(Number(four)); //number
+        var five = "10.5";
+        console.log(parseInt(four)); //문자 -> 정수
+        console.log(parseFloat(five)); //문자 -> 실수
+
+        //진수 변환
+        console.log(three.toString(2)); // 10진수를 2진수로 1010
+        console.log(parseInt(three,2)); //2진수를 10진수로 3
+
+        //변수명
+        var _ = 3; // _ 도 변수명으로 사용가능하나 권장x(반복문같이 의미없는 쓰는 경우)
+        console.log(_); //3
+        var $hi = 10; //$와 같은 특수문자도 사용가능하나 권장x
+        console.log($hi) //10
+        
+        var six = 10;
+        var seven = "10";
+        console.log(typeof(six)); //number
+        console.log(typeof(seven)); //string
+
+        // 등호 두개는 형태 상관없이 비교
+        console.log(six==seven); //true
+        console.log(six!=seven); //false
+        // 등호 세개는 형태까지 비교
+        console.log(six===seven); //false
+        console.log(six!==seven); //true
+
+    </script>
+</body>
+</html>
